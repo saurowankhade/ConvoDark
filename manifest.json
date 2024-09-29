@@ -1,0 +1,35 @@
+{
+    "name": "ConvoDark",
+    "description": "Convert any website into dark mode just on one click",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "content.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "action": {
+        "default_title": "ConvoDark",
+        "default_popup": "popup.html"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["appOn.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
