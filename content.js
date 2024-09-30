@@ -11,11 +11,15 @@ const checkAndApplyDarkMode = () => {
     chrome.storage.sync.get('urls', (data) => {
         const urls = data.urls || [];
         const currentUrl = window.location.href;
+        console.log("URL is ",urls);
+        
 
         // If the current URL is stored, apply dark mode
-        if (urls.includes(currentUrl)) {
-            applyDarkMode();  // Automatically applies dark mode
+       urls.map((url)=>{
+        if(url === currentUrl){
+            applyDarkMode();
         }
+       })
     });
 };
 

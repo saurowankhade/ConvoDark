@@ -1,8 +1,13 @@
 {
     "name": "ConvoDark",
-    "description": "Convert any website into dark mode just on one click",
+    "description": "Transform Any Website to Dark Mode Instantly!",
     "version": "1.0.0",
     "manifest_version": 3,
+    "icons": {
+        "16": "CanvoDark_Logo.png",
+        "48": "CanvoDark_Logo.png",
+        "128": "CanvoDark_Logo.png"
+      },
     "permissions": [
         "tabs",
         "activeTab",
